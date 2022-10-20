@@ -3,7 +3,7 @@ import asyncio
 from api import app
 
 async def main():
-    config = uvicorn.Config("api.main:app", host="127.0.0.1", debug=True, port=8000, reload=True, log_level="info")
+    config = uvicorn.Config("api.main:app", host="0.0.0.0", debug=True, port=8080, log_level="info")
     server = uvicorn.Server(config)
     await server.serve()
 
